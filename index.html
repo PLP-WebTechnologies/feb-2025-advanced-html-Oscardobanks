@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Demo</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+        form {
+            max-width: 500px;
+            margin: 20px 0;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, textarea {
+            margin-bottom: 15px;
+            width: 100%;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <h1>HTML5 Features Demonstration</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#lists">Lists</a></li>
+            <li><a href="#images">Images</a></li>
+            <li><a href="#tables">Tables</a></li>
+            <li><a href="#forms">Forms</a></li>
+            <li><a href="#multimedia">Multimedia</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Ordered List Section -->
+        <section id="lists">
+            <h2>Ordered List with Roman Numerals</h2>
+            <ol type="I">
+                <li>First item with Roman numeral</li>
+                <li>Second item with Roman numeral</li>
+                <li>Third item with Roman numeral</li>
+                <li>Fourth item with Roman numeral</li>
+            </ol>
+        </section>
+
+        <!-- Image Section -->
+        <section id="images">
+            <h2>External Image from Pexels</h2>
+            <figure>
+                <img src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg" 
+                     alt="Beautiful landscape with tree and lake" 
+                     width="600"
+                     loading="lazy">
+                <figcaption>Scenic landscape photo from Pexels</figcaption>
+            </figure>
+        </section>
+
+        <!-- Table Section -->
+        <section id="tables">
+            <h2>Contact Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Mobile</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>123 Main St, Anytown</td>
+                        <td>(555) 123-4567</td>
+                        <td>john@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>Jane Smith</td>
+                        <td>456 Oak Ave, Somewhere</td>
+                        <td>(555) 987-6543</td>
+                        <td>jane@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>Bob Johnson</td>
+                        <td>789 Pine Rd, Nowhere</td>
+                        <td>(555) 456-7890</td>
+                        <td>bob@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>Alice Brown</td>
+                        <td>321 Elm Blvd, Anywhere</td>
+                        <td>(555) 789-0123</td>
+                        <td>alice@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>Charlie Wilson</td>
+                        <td>654 Maple Ln, Everywhere</td>
+                        <td>(555) 234-5678</td>
+                        <td>charlie@example.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Form Section -->
+        <section id="forms">
+            <h2>Registration Form</h2>
+            <form id="registrationForm" novalidate>
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" 
+                       placeholder="Enter your full name" required
+                       minlength="3" maxlength="50">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" 
+                       placeholder="Enter your email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" 
+                       placeholder="Create a password" required
+                       minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option value="">Select your country</option>
+                    <option value="us">United States</option>
+                    <option value="ca">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="au">Australia</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <fieldset>
+                    <legend>Gender:</legend>
+                    <label>
+                        <input type="radio" name="gender" value="male" required> Male
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female"> Female
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="other"> Other
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Interests (Select at least one):</legend>
+                    <label>
+                        <input type="checkbox" name="interests" value="sports"> Sports
+                    </label>
+                    <label>
+                        <input type="checkbox" name="interests" value="music"> Music
+                    </label>
+                    <label>
+                        <input type="checkbox" name="interests" value="reading"> Reading
+                    </label>
+                    <label>
+                        <input type="checkbox" name="interests" value="travel"> Travel
+                    </label>
+                </fieldset>
+
+                <label for="comments">Additional Comments:</label>
+                <textarea id="comments" name="comments" 
+                          placeholder="Any additional information"></textarea>
+
+                <label>
+                    <input type="checkbox" name="terms" required> I agree to the terms and conditions
+                </label>
+
+                <button type="submit">Register</button>
+                <button type="reset">Reset Form</button>
+            </form>
+        </section>
+
+        <!-- Multimedia Section -->
+        <section id="multimedia">
+            <h2>Multimedia Elements</h2>
+            
+            <h3>Audio Example</h3>
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            
+            <h3>Video Example</h3>
+            <video width="600" controls poster="https://images.pexels.com/photos/670720/pexels-photo-670720.jpeg">
+                <source src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contact: <a href="mailto:info@example.com">info@example.com</a></p>
+        <p>&copy; 2023 HTML5 Demo. All rights reserved.</p>
+    </footer>
+</body>
+</html>
